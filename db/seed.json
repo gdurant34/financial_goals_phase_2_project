@@ -1,0 +1,45 @@
+{
+    "data": {
+        "account": [
+            {
+                "id": 1,
+                "name": "main",
+                "balance": 500.00
+            }
+        ],
+        "transactions": [
+            {
+                "id": 1,
+                "name": "test1",
+                "date": "2022-08-15",
+                "amount": 50.00
+            },
+            {
+                "id": 2,
+                "name": "test2",
+                "date": "2022-08-05",
+                "amount": 30.00
+            },
+            {
+                "id": 3,
+                "name": "test3",
+                "date": "2022-08-10",
+                "amount": 20.00
+            }
+        ],
+        "goals": [
+            {
+                "id": 1,
+                "progress": 87,
+                "total": 120.00,
+                "current": 10.00
+            },
+            {
+                "id": 1,
+                "progress": 3,
+                "total": 50.00,
+                "current": 4.00
+            }
+        ]
+    }
+}
