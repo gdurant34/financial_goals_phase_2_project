@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import AccountSummary from './pages/AccountSummary/AccountSummary';
 import Goals from './pages/Goals/Goals';
+import CompletedGoals from './pages/CompletedGoals/CompletedGoals';
+import Form from "./components/Form/Form";
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/account-summary" element={<AccountSummary />} />
         <Route path="/goals" element={<Goals />} />
+        <Route path="/completed-goals" element={<CompletedGoals />} />
       </Routes>
     </div>
   );
