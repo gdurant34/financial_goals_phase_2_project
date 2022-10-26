@@ -10,22 +10,22 @@ function TransactionList({ transactions }) {
     return (
         <>
             <div>
-                <h1>Transactions</h1>
+                <h3>Transactions</h3>
             </div>
             <table className="">
                 <tbody>
                     <tr>
                         <th>
-                            <h3 className="">Category</h3>
+                            <h4 className="">Category</h4>
                         </th>
                         <th>
-                            <h3 className="">Date</h3>
+                            <h4 className="">Date</h4>
                         </th>
                         <th>
-                            <h3 className="">Description</h3>
+                            <h4 className="">Description</h4>
                         </th>
                         <th>
-                            <h3 className="">Amount</h3>
+                            <h4 className="">Amount</h4>
                         </th>
                     </tr>
                     {transactionList}

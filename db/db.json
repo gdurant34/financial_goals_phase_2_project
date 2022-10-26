@@ -1,11 +1,9 @@
 {
-    "account": [
-        {
+    "account": {
             "id": 1,
-            "name": "main",
+            "name": "Checking",
             "balance": 500.00
-        }
-    ],
+    },
     "transactions": [
         {
             "id": 1,

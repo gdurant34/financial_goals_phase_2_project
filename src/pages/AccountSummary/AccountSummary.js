@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import TransactionList from '../../components/TransactionList/TransactionList';
+import "./AccountSummary.css";
+import TransactionForm from '../../components/TransactionForm/TransactionForm';
 
 
 function AccountSummary() {
@@ -17,17 +19,24 @@ function AccountSummary() {
     }, [])
 
     const { name, balance  } = account;
-    console.log(name, balance)
 
     return (
         <div>
-            <h1>Account Summary Page!</h1>
-            <div>
-               
-            </div>
-            <div>
-                <TransactionList transactions={transactions} />
-            </div>
+            <h1>Account Summary</h1>
+            <div className="display-container">
+                <div className="account-container">
+                    <div className="account">
+                        <h3>Account</h3>
+                            {name} ${parseFloat(balance).toFixed(2)}
+                        </div>
+                        <div>
+                            <TransactionForm />
+                        </div>
+                    </div>
+                </div>
+                <div className="transactions">
+                    <TransactionList transactions={transactions} />
+                </div>
         </div>
     );
 }
