@@ -1,9 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ContributionForm from '../ContributionForm/ContributionForm';
 import "./Goal.css";
 
-function Goal({ goal, handleSubmit, input, setInput }) {
+function Goal({ goal, currentDate, transactions, setTransactions  }) {
     const { progress, name, total, current } = goal;
+    const [inputGoal, setInputGoal] = useState('');
+
+
+  function handleSubmitGoal(e) {
+    e.preventDefault();
+    console.log(e.target[0].name)
+    const newTransaction = {
+      id: "",
+      category: e.target[0].name,
+      date: currentDate, 
+      amount: inputGoal
+    }
+
+    fetch("http://localhost:3000/transactions", {
+        method: "POST",
+        headers: {
+            "content-Type" : "application/json"
+        },
+        body: JSON.stringify(newTransaction)
+    })
+        .then(r => r.json())
+        .then(savedTransaction => setTransactions([...transactions, savedTransaction]));
+    
+      setInputGoal('');
+  }
 
     return (
       <div className='card'>
@@ -21,9 +46,9 @@ function Goal({ goal, handleSubmit, input, setInput }) {
         </div>
         <div>
           <ContributionForm
-            handleSubmit={handleSubmit}
-            setInput={setInput}
-            input={input}
+            handleSubmit={handleSubmitGoal}
+            setInput={setInputGoal}
+            input={inputGoal}
             goalName={name}
           />
         </div>

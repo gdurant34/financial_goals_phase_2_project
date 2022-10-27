@@ -13,7 +13,6 @@ function App() {
   const [account, setAccount] = useState([]);
   const [transactions, setTransactions] = useState([]);
   const [inputTransaction, setInputTransaction] = useState('');
-  const [inputGoal, setInputGoal] = useState('');
   const [goals, setGoals] = useState([]);
   const [selected, setSelected] = useState("Select");
 
@@ -63,44 +62,7 @@ function App() {
     setInputTransaction('');
     setSelected("Select")
   }
-
-  function handleSubmitGoal(e) {
-    e.preventDefault();
-    console.log(e.target[0].name)
-    const newTransaction = {
-      id: "",
-      category: e.target[0].name,
-      date: currentDate(), 
-      amount: inputGoal
-    }
-
-    fetch("http://localhost:3000/transactions", {
-        method: "POST",
-        headers: {
-            "content-Type" : "application/json"
-        },
-        body: JSON.stringify(newTransaction)
-    })
-        .then(r => r.json())
-        .then(savedTransaction => setTransactions([...transactions, savedTransaction]));
-    
-      setInputGoal('');
-  }
-    /* 
-
-    if the event we're receiving is from the goal form {
-      resetGoalFormState()
-    }
-
-    if the event we're receiving is from the transaction form {
-      resetTransactionFormState()
-    }
-
-    could be two seperater 
-
-    */
   
-
 
   return (
     <div className="App">
@@ -121,10 +83,10 @@ function App() {
         />
         <Route path="/goals" element={
           <ActiveGoals 
-            handleSubmit={handleSubmitGoal} 
-            input={inputGoal}
-            setInput={setInputGoal}
             goals={goals}
+            transactions={transactions}
+            setTransactions={setTransactions}
+            currentDate={currentDate}
           />} 
         />
         <Route path="/completed-goals" element={<CompletedGoals />} />
