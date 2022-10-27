@@ -2,19 +2,23 @@ import React, { useState } from 'react';
 import ContributionForm from '../ContributionForm/ContributionForm';
 import "./Goal.css";
 
-function Goal({ goal, currentDate, transactions, setTransactions  }) {
+function Goal({ goal, currentDate, transactions, setTransactions, account, setAccount  }) {
     const { progress, name, total, current } = goal;
     const [inputGoal, setInputGoal] = useState('');
 
 
   function handleSubmitGoal(e) {
     e.preventDefault();
-    console.log(e.target[0].name)
     const newTransaction = {
       id: "",
       category: e.target[0].name,
-      date: currentDate, 
+      date: currentDate(), 
       amount: inputGoal
+    }
+
+    const newAccountBalance = {
+      ...account,
+      balance: (account.balance - inputGoal)
     }
 
     fetch("http://localhost:3000/transactions", {
@@ -26,7 +30,17 @@ function Goal({ goal, currentDate, transactions, setTransactions  }) {
     })
         .then(r => r.json())
         .then(savedTransaction => setTransactions([...transactions, savedTransaction]));
-    
+
+        fetch(`http://localhost:3000/account`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type" : "application/json"
+          },
+          body: JSON.stringify(newAccountBalance)
+        })
+          .then(r => r.json())
+          .then(setAccount)
+
       setInputGoal('');
   }
 
@@ -36,13 +50,13 @@ function Goal({ goal, currentDate, transactions, setTransactions  }) {
           <h3>{name.toUpperCase()}</h3>
         </div>
         <div className='total'>
-          <h3>{total}</h3>
+          <div>Total: {total}</div>
         </div>
         <div className='current'>
-          <h3>{current}</h3>
+          <div>Current: {current}</div>
         </div>
         <div className='progress'>
-          <h3>{progress}</h3>
+          <div>Progress: {progress}</div>
         </div>
         <div>
           <ContributionForm

@@ -1,7 +1,7 @@
 import React from 'react';
 import Goal from '../../components/Goal/Goal';
 
-function ActiveGoals({ goals, transactions, setTransactions, currentDate }) {
+function ActiveGoals({ goals, transactions, setTransactions, currentDate, account, setAccount }) {
     const goalsList = goals.map(goal => (
         <Goal 
             key={goal.id} 
@@ -9,6 +9,8 @@ function ActiveGoals({ goals, transactions, setTransactions, currentDate }) {
             transactions={transactions}
             setTransactions={setTransactions}
             currentDate={currentDate}
+            account={account}
+            setAccount={setAccount}
         />
     ))
 
