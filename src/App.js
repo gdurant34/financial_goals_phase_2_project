@@ -87,6 +87,8 @@ function App() {
             transactions={transactions}
             setTransactions={setTransactions}
             currentDate={currentDate}
+            account={account}
+            setAccount={setAccount}
           />} 
         />
         <Route path="/completed-goals" element={<CompletedGoals />} />
