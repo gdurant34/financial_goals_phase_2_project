@@ -16,7 +16,7 @@
 
 .transactions {
     display: inline-block;
-    border: 1px solid grey;
+    border: 1px solid #0A2540;
     padding: 1rem 1rem;
     vertical-align: middle;
     border-radius: 10px;
@@ -24,7 +24,7 @@
 
 .account {
     display: inline-block;
-    border: 1px solid grey;
+    border: 1px solid #0A2540;
     padding: 1rem 1rem;
     vertical-align: middle;
     border-radius: 10px;
