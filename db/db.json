@@ -9,21 +9,18 @@
             "id": 1,
             "category": "test1",
             "date": "2022-08-15",
-            "description": "going to a goal A",
             "amount": 50.00
         },
         {
             "id": 2,
             "category": "test2",
             "date": "2022-08-05",
-            "description": "going to a goal C",
             "amount": 30.00
         },
         {
             "id": 3,
             "category": "test3",
             "date": "2022-08-10",
-            "description": "added money to account",
             "amount": 20.00
         }
     ],
@@ -35,7 +32,7 @@
             "current": 10.00
         },
         {
-            "id": 1,
+            "id": 2,
             "progress": 3,
             "total": 50.00,
             "current": 4.00
