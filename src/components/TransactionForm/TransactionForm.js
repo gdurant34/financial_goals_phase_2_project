@@ -30,14 +30,6 @@ function TransactionForm() {
                         type="date"
                     />
                 </label>
-                <label> Description
-                    <input 
-                        className="description"
-                        type="text"
-                        name="description"
-                        value=""
-                    />
-                </label>
                 <label> Amount
                     <input 
                         className="amount"
