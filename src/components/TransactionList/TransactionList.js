@@ -22,9 +22,6 @@ function TransactionList({ transactions }) {
                             <h4 className="">Date</h4>
                         </th>
                         <th>
-                            <h4 className="">Description</h4>
-                        </th>
-                        <th>
                             <h4 className="">Amount</h4>
                         </th>
                     </tr>
