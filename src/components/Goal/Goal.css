@@ -1,0 +1,15 @@
+.card {
+    border: 1px solid grey;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+}
+
+/* .current {
+    float: left;
+    margin: 15px;
+}
+
+.total {
+    float: left;
+    margin: 15px;
+} */

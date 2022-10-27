@@ -4,20 +4,7 @@ import "./AccountSummary.css";
 import TransactionForm from '../../components/TransactionForm/TransactionForm';
 
 
-function AccountSummary({ transactions, account }) {
-    // const [account, setAccount] = useState([]);
-    // const [transactions, setTransactions] = useState([]);
-
-    // useEffect(() => {
-    //     fetch("http://localhost:3000/account")
-    //         .then(r => r.json())
-    //         .then(setAccount);
-
-    //     fetch(" http://localhost:3000/transactions")
-    //         .then(r => r.json())
-    //         .then(setTransactions)
-    // }, [])
-
+function AccountSummary({ transactions, account, handleSubmit, input, setInput, selected, setSelected, onChange }) {
     const { name, balance  } = account;
 
 
@@ -29,10 +16,17 @@ function AccountSummary({ transactions, account }) {
                 <div className="account-container">
                     <div className="account">
                         <h3>Account</h3>
-                            {name} ${parseFloat(balance).toFixed(2)}
+                            {name}: ${balance}
                         </div>
                         <div>
-                            <TransactionForm />
+                            <TransactionForm  
+                                handleSubmit={handleSubmit}
+                                input={input}
+                                setInput={setInput}
+                                selected={selected}
+                                setSelected={setSelected}
+                                onChange={onChange}
+                            />
                         </div>
                     </div>
                 </div>

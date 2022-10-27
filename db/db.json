@@ -1,41 +1,61 @@
 {
-    "account": {
-            "id": 1,
-            "name": "Checking",
-            "balance": 500.00
+  "account": {
+    "id": 1,
+    "name": "Checking",
+    "balance": 500.87
+  },
+  "transactions": [
+    {
+      "id": 1,
+      "category": "test1",
+      "date": "2022-08-15",
+      "amount": 50
     },
-    "transactions": [
-        {
-            "id": 1,
-            "category": "test1",
-            "date": "2022-08-15",
-            "amount": 50.00
-        },
-        {
-            "id": 2,
-            "category": "test2",
-            "date": "2022-08-05",
-            "amount": 30.00
-        },
-        {
-            "id": 3,
-            "category": "test3",
-            "date": "2022-08-10",
-            "amount": 20.00
-        }
-    ],
-    "goals": [
-        {
-            "id": 1,
-            "progress": 87,
-            "total": 120.00,
-            "current": 10.00
-        },
-        {
-            "id": 2,
-            "progress": 3,
-            "total": 50.00,
-            "current": 4.00
-        }
-    ]
+    {
+      "id": 2,
+      "category": "test2",
+      "date": "2022-08-05",
+      "amount": 30
+    },
+    {
+      "id": 3,
+      "category": "test3",
+      "date": "2022-08-10",
+      "amount": 20
+    },
+    {
+      "id": 4,
+      "category": "AddMoney",
+      "date": "2022-10-27",
+      "amount": "100.50"
+    },
+    {
+      "id": 5,
+      "category": "fun",
+      "date": "2022-10-27",
+      "amount": "127.50"
+    },
+    {
+      "id": 6,
+      "category": "AddMoney",
+      "date": "2022-10-27",
+      "amount": "523563"
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "name": "fun",
+      "progress": 87,
+      "total": 120,
+      "current": 10
+    },
+    {
+      "id": 2,
+      "name": "new car",
+      "progress": 3,
+      "total": 50,
+      "current": 4
+    }
+  ]
 }
