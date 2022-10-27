@@ -46,6 +46,18 @@
       "category": "fun",
       "date": "2022-10-27",
       "amount": "10"
+    },
+    {
+      "id": 17,
+      "category": "Select",
+      "date": "2022-10-27",
+      "amount": ""
+    },
+    {
+      "id": 18,
+      "category": "Select",
+      "date": "2022-10-27",
+      "amount": ""
     }
   ],
   "goals": [

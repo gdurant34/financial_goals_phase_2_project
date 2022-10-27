@@ -4,12 +4,14 @@
     padding: 2rem 2rem;
     text-align: center;
     display: flex;
+    border-radius: 10px;
 }
 
 .account-container {
     display: inline-block;
     padding: 1rem 1rem;
     vertical-align: middle;
+    border-radius: 10px;
 }
 
 .transactions {
@@ -17,6 +19,7 @@
     border: 1px solid grey;
     padding: 1rem 1rem;
     vertical-align: middle;
+    border-radius: 10px;
 }
 
 .account {
@@ -24,5 +27,14 @@
     border: 1px solid grey;
     padding: 1rem 1rem;
     vertical-align: middle;
+    border-radius: 10px;
+
     
 }
+
+.card {
+    margin: 10px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
