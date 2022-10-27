@@ -2,7 +2,7 @@
   "account": {
     "id": 1,
     "name": "Checking",
-    "balance": 460.87
+    "balance": 355.87
   },
   "transactions": [
     {
@@ -31,33 +31,15 @@
     },
     {
       "id": 14,
-      "category": "new car",
+      "category": "fun",
       "date": "2022-10-27",
-      "amount": "10"
+      "amount": "20"
     },
     {
       "id": 15,
-      "category": "AddMoney",
+      "category": "new car",
       "date": "2022-10-27",
-      "amount": "12"
-    },
-    {
-      "id": 16,
-      "category": "fun",
-      "date": "2022-10-27",
-      "amount": "10"
-    },
-    {
-      "id": 17,
-      "category": "Select",
-      "date": "2022-10-27",
-      "amount": ""
-    },
-    {
-      "id": 18,
-      "category": "Select",
-      "date": "2022-10-27",
-      "amount": ""
+      "amount": "5"
     }
   ],
   "goals": [
@@ -65,15 +47,15 @@
       "id": 1,
       "name": "fun",
       "progress": 87,
-      "total": 120,
-      "current": 10
+      "total": 117,
+      "current": 137
     },
     {
       "id": 2,
       "name": "new car",
       "progress": 3,
       "total": 50,
-      "current": 4
+      "current": 9
     }
   ]
 }
