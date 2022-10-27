@@ -44,10 +44,6 @@ function NavBar() {
             style={({ isActive }) => isActive ? activeStyle : linkStyles}
             >Active Goals</NavLink>
 
-        <NavLink
-            to="/completed-goals"            
-            style={({ isActive }) => isActive ? activeStyle : linkStyles}
-            >Completed Goals</NavLink>
         </div>
     );
 }
