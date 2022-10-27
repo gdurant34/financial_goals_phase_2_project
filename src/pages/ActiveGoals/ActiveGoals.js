@@ -1,21 +1,22 @@
 import React from 'react';
-import GoalsList from '../../components/GoalsList/GoalsList';
+import Goal from '../../components/Goal/Goal';
 
-function Goals({ handleSubmit, input, setInput, goals }) {
+function ActiveGoals({ goals, transactions, setTransactions, currentDate }) {
+    const goalsList = goals.map(goal => (
+        <Goal 
+            key={goal.id} 
+            goal={goal} 
+            transactions={transactions}
+            setTransactions={setTransactions}
+            currentDate={currentDate}
+        />
+    ))
 
     return (
         <div>
-            <h1>Active Goals</h1>
-            <div>
-                <GoalsList 
-                    handleSubmit={handleSubmit} 
-                    input={input} 
-                    setInput={setInput} 
-                    goals={goals}
-                />
-            </div>
-        </div>
+            {goalsList}
+        </div>      
     );
 }
 
-export default Goals;
+export default ActiveGoals;
