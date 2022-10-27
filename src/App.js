@@ -12,8 +12,10 @@ import Form from "./components/Form/Form";
 function App() {  
   const [account, setAccount] = useState([]);
   const [transactions, setTransactions] = useState([]);
-  const [input, setInput] = useState('');
+  const [inputTransaction, setInputTransaction] = useState('');
+  const [inputGoal, setInputGoal] = useState('');
   const [goals, setGoals] = useState([]);
+  const [selected, setSelected] = useState("Select");
 
 
   useEffect(() => {
@@ -35,14 +37,17 @@ function App() {
     return currentDate.toISOString().split('T')[0];
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function onChangeSelect(e) {
+    setSelected(e.target.value)
+  }
 
+  function handleSubmitTransaction(e) {
+    e.preventDefault();
     const newTransaction = {
-        id: "",
-        category: e.target,
-        date: currentDate(), 
-        amount: input
+      id: "",
+      category: selected,
+      date: currentDate(), 
+      amount: inputTransaction
     }
 
     fetch("http://localhost:3000/transactions", {
@@ -53,8 +58,48 @@ function App() {
         body: JSON.stringify(newTransaction)
     })
         .then(r => r.json())
-        .then(setTransactions)
-}
+        .then(savedTransaction => setTransactions([...transactions, savedTransaction]));
+    
+    setInputTransaction('');
+    setSelected("Select")
+  }
+
+  function handleSubmitGoal(e) {
+    e.preventDefault();
+    console.log(e.target[0].name)
+    const newTransaction = {
+      id: "",
+      category: e.target[0].name,
+      date: currentDate(), 
+      amount: inputGoal
+    }
+
+    fetch("http://localhost:3000/transactions", {
+        method: "POST",
+        headers: {
+            "content-Type" : "application/json"
+        },
+        body: JSON.stringify(newTransaction)
+    })
+        .then(r => r.json())
+        .then(savedTransaction => setTransactions([...transactions, savedTransaction]));
+    
+      setInputGoal('');
+  }
+    /* 
+
+    if the event we're receiving is from the goal form {
+      resetGoalFormState()
+    }
+
+    if the event we're receiving is from the transaction form {
+      resetTransactionFormState()
+    }
+
+    could be two seperater 
+
+    */
+  
 
 
   return (
@@ -66,14 +111,19 @@ function App() {
           <AccountSummary 
             transactions={transactions}
             account={account}
+            handleSubmit={handleSubmitTransaction} 
+            input={inputTransaction}
+            setInput={setInputTransaction}
+            selected={selected}
+            setSelected={setSelected}
+            onChange={onChangeSelect}
           />} 
         />
         <Route path="/goals" element={
           <ActiveGoals 
-            handleSubmit={handleSubmit} 
-            setTransactions={setTransactions}
-            input={input}
-            setInput={setInput}
+            handleSubmit={handleSubmitGoal} 
+            input={inputGoal}
+            setInput={setInputGoal}
             goals={goals}
           />} 
         />
