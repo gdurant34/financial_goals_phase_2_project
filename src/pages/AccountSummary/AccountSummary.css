@@ -1,12 +1,9 @@
 .display-container {
-    /* border: 1px solid black; */
     margin: 1rem;
-    padding: 2rem 2rem;
+    padding: .5rem 1rem;
     text-align: center;
     display: flexbox;
     border-radius: 10px;
-    /* background-color: #D4F1F4;
-    color: #05445E; */
 }
 
 .account-container {
@@ -22,10 +19,14 @@
 .transactions {
     display: inline-block;
     border: 1px solid #0A2540;
-    padding: 1rem 1rem;
+    margin-top: 20px;
+    padding-bottom: 30px;
     vertical-align: middle;
     border-radius: 10px;
-    /* width: 50%; */
+    height: 30%;
+    width: 75%;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .account {
@@ -35,7 +36,7 @@
     vertical-align: middle;
     border-radius: 10px;
     background-color: #e0e0de;
-    /* color: #D4F1F4; */
+    font-size: 20px;
 }
 
 .card {
@@ -44,3 +45,8 @@
     border-radius: 10px;
     padding: 10px 20px;
   }
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import bigDecimal from 'js-big-decimal';
 
 function Transaction({ transaction }) {
     const { category, date, amount } = transaction;
@@ -7,7 +8,7 @@ function Transaction({ transaction }) {
       <tr>
         <td>{category}</td>
         <td>{date}</td>
-        <td>{amount}</td>
+        <td>${bigDecimal.getPrettyValue(amount)}</td>
       </tr>
     );
   }
