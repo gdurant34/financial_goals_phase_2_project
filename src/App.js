@@ -7,7 +7,7 @@ import Home from './pages/Home/Home';
 import AccountSummary from './pages/AccountSummary/AccountSummary';
 import ActiveGoals from './pages/ActiveGoals/ActiveGoals';
 import CompletedGoals from './pages/CompletedGoals/CompletedGoals';
-import Form from "./components/Form/Form";
+import Form from "./components/NewGoalForm/NewGoalForm";
 
 function App() {  
   const [account, setAccount] = useState([]);

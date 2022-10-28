@@ -1,5 +1,6 @@
 import React from 'react';
 import Goal from '../../components/Goal/Goal';
+import NewGoalForm from '../../components/NewGoalForm/NewGoalForm';
 
 function ActiveGoals({ goals, transactions, setTransactions, currentDate, account, setAccount, setGoals }) {
     const goalsList = goals.map(goal => (
@@ -18,7 +19,15 @@ function ActiveGoals({ goals, transactions, setTransactions, currentDate, accoun
 
     return (
         <div>
-            {goalsList}
+            <div>
+                {goalsList}
+            </div>
+            <div>
+                <NewGoalForm 
+                    goals={goals}
+                    setGoals={setGoals}
+                />
+            </div>
         </div>      
     );
 }
