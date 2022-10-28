@@ -40,6 +40,21 @@ function App() {
     setSelected(e.target.value)
   }
 
+  function increaseBalance() {
+    return {
+      ...account,
+      balance: (parseFloat(account.balance) + parseFloat(inputTransaction))
+    }
+  }
+  
+  function decreaseBalance() {
+    return {
+      ...account,
+      balance: (parseFloat(account.balance) - parseFloat(inputTransaction))
+    }
+  }
+
+
   function handleSubmitTransaction(e) {
     e.preventDefault();
     const newTransaction = {
@@ -48,6 +63,26 @@ function App() {
       date: currentDate(), 
       amount: inputTransaction
     }
+
+   let updatedBalance; 
+   
+   if (selected === 'AddMoney') {
+    updatedBalance = increaseBalance();
+   } else if (selected === 'RemoveMoney') {
+    updatedBalance = decreaseBalance();
+   }
+    
+
+    fetch(`http://localhost:3000/account`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(updatedBalance)
+    })
+      .then(r => r.json())
+      .then(setAccount)
+
 
     fetch("http://localhost:3000/transactions", {
         method: "POST",

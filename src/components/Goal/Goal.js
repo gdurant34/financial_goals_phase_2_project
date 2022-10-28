@@ -50,7 +50,7 @@ function Goal({ goals, goal, currentDate, transactions, setTransactions, account
 
 
     const newCurrentAmount = {
-      current: (parseInt(goal.current) + parseInt(inputGoal))
+      current: (parseFloat(goal.current) + parseFloat(inputGoal))
     }
 
     fetch(`http://localhost:3000/goals/${goal.id}`, {
