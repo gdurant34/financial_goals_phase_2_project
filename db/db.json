@@ -111,6 +111,13 @@
       "progress": 0,
       "total": "500000",
       "current": 400
+    },
+    {
+      "id": 4,
+      "name": "New laptop",
+      "progress": 0,
+      "total": "1200",
+      "current": 0
     }
   ]
 }
