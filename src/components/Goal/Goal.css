@@ -1,5 +1,5 @@
 .card {
-    border: 1px solid grey;
+    border: 1px solid #0A2540;
     padding: 1rem 1rem;
     vertical-align: middle;
 }
@@ -13,3 +13,16 @@
     float: left;
     margin: 15px;
 } */
+
+.card {
+    margin: 10px;
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+    border-radius: 10px;
+
+  }
+
