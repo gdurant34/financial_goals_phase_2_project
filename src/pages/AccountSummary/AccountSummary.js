@@ -2,12 +2,11 @@ import React from 'react';
 import TransactionList from '../../components/TransactionList/TransactionList';
 import "./AccountSummary.css";
 import TransactionForm from '../../components/TransactionForm/TransactionForm';
+import bigDecimal from 'js-big-decimal';
 
 
 function AccountSummary({ transactions, account, handleSubmit, input, setInput, selected, setSelected, onChange }) {
     const { name, balance  } = account;
-    console.log(balance)
-    // const displayBalance = balance.toFixed(2)
 
     return (
         <div>
@@ -16,7 +15,7 @@ function AccountSummary({ transactions, account, handleSubmit, input, setInput, 
                 <div className="account-container">
                     <div className="account">
                         <h3>Account</h3>
-                            {name}: ${balance}
+                            {name}: ${bigDecimal.getPrettyValue(balance)}
                         </div>
                         <div>
                             <TransactionForm  
