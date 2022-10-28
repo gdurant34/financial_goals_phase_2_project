@@ -8,28 +8,29 @@ function TransactionList({ transactions }) {
 
 
     return (
-        <>
+        <div className='parent-container'>
             <div>
                 <h3>Transactions</h3>
             </div>
-            <table className="">
-                <tbody>
-                    <tr>
-                        <th>
-                            <h4 className="">Category</h4>
-                        </th>
-                        <th>
-                            <h4 className="">Date</h4>
-                        </th>
-                        <th>
-                            <h4 className="">Amount</h4>
-                        </th>
-                    </tr>
-                    {transactionList}
-                </tbody>
-            </table>
-        </>
-
+            <div className='table-container'>
+                <table className="table">
+                    <tbody>
+                        <tr className='table-rows'>
+                            <th className='category'>
+                                <h4 className="">Category</h4>
+                            </th>
+                            <th className='category'>
+                                <h4 className="">Date</h4>
+                            </th>
+                            <th className='category'>
+                                <h4 className="">Amount</h4>
+                            </th>
+                        </tr>
+                        {transactionList}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     );
 }
 

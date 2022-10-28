@@ -6,7 +6,7 @@ import bigDecimal from 'js-big-decimal';
 
 
 function AccountSummary({ transactions, account, handleSubmit, input, setInput, selected, setSelected, onChange }) {
-    const { name, balance  } = account;
+    const { name, balance } = account;
 
     return (
         <div>
@@ -15,23 +15,23 @@ function AccountSummary({ transactions, account, handleSubmit, input, setInput, 
                 <div className="account-container">
                     <div className="account">
                         <h3>Account</h3>
-                            {name}: ${bigDecimal.getPrettyValue(balance)}
-                        </div>
-                        <div>
-                            <TransactionForm  
-                                handleSubmit={handleSubmit}
-                                input={input}
-                                setInput={setInput}
-                                selected={selected}
-                                setSelected={setSelected}
-                                onChange={onChange}
-                            />
-                        </div>
+                        {name}: ${bigDecimal.getPrettyValue(balance)}
+                    </div>
+                    <div>
+                        <TransactionForm
+                            handleSubmit={handleSubmit}
+                            input={input}
+                            setInput={setInput}
+                            selected={selected}
+                            setSelected={setSelected}
+                            onChange={onChange}
+                        />
                     </div>
                 </div>
-                <div className="transactions">
-                    <TransactionList transactions={transactions} />
-                </div>
+            </div>
+            <div className="transactions">
+                <TransactionList transactions={transactions} />
+            </div>
         </div>
     );
 }
