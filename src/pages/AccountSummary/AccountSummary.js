@@ -6,6 +6,8 @@ import TransactionForm from '../../components/TransactionForm/TransactionForm';
 
 function AccountSummary({ transactions, account, handleSubmit, input, setInput, selected, setSelected, onChange }) {
     const { name, balance  } = account;
+    console.log(balance)
+    // const displayBalance = balance.toFixed(2)
 
     return (
         <div>
