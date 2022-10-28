@@ -10,7 +10,7 @@ function ContributionForm({handleSubmit, setInput, input, goalName }) {
                     <input 
                         onChange={(e) => setInput(e.target.value)}
                         className="amount"
-                        type="number"
+                        type="text"
                         name={goalName}
                         value={input}
                     />

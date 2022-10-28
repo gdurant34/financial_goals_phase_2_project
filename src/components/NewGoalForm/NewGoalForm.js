@@ -45,7 +45,7 @@ function NewGoalForm({ goals, setGoals }) {
                     <input
                         onChange={(e) => setTotal(e.target.value)}
                         className="total"
-                        type="number"
+                        type="text"
                         value={total}
                     />
                 </label>

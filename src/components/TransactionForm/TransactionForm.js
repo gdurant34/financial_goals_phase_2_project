@@ -24,7 +24,7 @@ function TransactionForm({handleSubmit, input, setInput, onChange, selected }) {
                     <input 
                         onChange={(e) => setInput(e.target.value)}
                         className="amount"
-                        type="number"
+                        type="text"
                         name="amount"
                         value={input}
                     />
