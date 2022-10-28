@@ -10,6 +10,7 @@ import CompletedGoals from './pages/CompletedGoals/CompletedGoals';
 // import bigDecimal from 'js-big-decimal';
 import { addNumbers } from './utils/NumberHelper';
 import { subNumbers } from './utils/NumberHelper';
+import '/'
 
 function App() {  
   const [account, setAccount] = useState([]);

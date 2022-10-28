@@ -1,3 +1,21 @@
-.parent-container {
-    background-color: #D4F1F4;
+.table-container {
+    width: 50%;
+    text-align: center;
+    width: 75%;
+    margin: 0 21.5%;
+}
+
+table {
+    text-align: center;
+    width: 75%;
+    font-size: 20px;
+}
+
+th {
+    width: 30%;
+}
+.title {
+    font-size: 30px;
+    padding: 0;
+    margin: 5px;
 }

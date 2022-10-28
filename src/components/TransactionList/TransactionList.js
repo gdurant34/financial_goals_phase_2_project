@@ -1,5 +1,6 @@
 import React from 'react';
 import Transaction from '../Transaction/Transaction';
+import './TransactionList.css';
 
 function TransactionList({ transactions }) {
     const transactionList = transactions.map(transaction => (
@@ -9,7 +10,7 @@ function TransactionList({ transactions }) {
 
     return (
         <div className='parent-container'>
-            <div>
+            <div className='title'>
                 <h3>Transactions</h3>
             </div>
             <div className='table-container'>

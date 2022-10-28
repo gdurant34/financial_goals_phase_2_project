@@ -3,6 +3,7 @@ import TransactionList from '../../components/TransactionList/TransactionList';
 import "./AccountSummary.css";
 import TransactionForm from '../../components/TransactionForm/TransactionForm';
 import bigDecimal from 'js-big-decimal';
+import "./AccountSummary.css";
 
 
 function AccountSummary({ transactions, account, handleSubmit, input, setInput, selected, setSelected, onChange }) {
