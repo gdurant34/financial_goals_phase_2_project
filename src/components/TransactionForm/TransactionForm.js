@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
@@ -6,7 +6,7 @@ function TransactionForm({handleSubmit, input, setInput, onChange, selected }) {
 
 
     return (
-        <section id="transaction-for-section">
+        <section id="transaction-form-section">
             <h2>New Transaction</h2>
             <form onSubmit={handleSubmit}>
                 <label> Category
