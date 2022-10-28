@@ -48,21 +48,7 @@ h2 {
   align-items: center;
 }
 
-#home-container {
-  margin: 80px 50px;
-  width: 50%;
-}
-
-#home-container p{
-  opacity: 75%;
-}
-
-#home-container #author a{
-  font-weight: bold;
-  color: #00D4FF;
-}
-
-#goals-container, #accomplishments-container {
+.goals-container, accomplishments-container {
   display: flex;
     flex-wrap: wrap;
     margin: 50px 25px;
@@ -121,8 +107,9 @@ h2 {
   width: 100%;
 }
 
-#form-section {
-  margin-left: 50px;
+#new-goal-form {
+  margin-left: 80px;
+  border-radius: 50%;
 }
 
 form input, select, button {
