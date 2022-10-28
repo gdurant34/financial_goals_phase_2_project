@@ -7,7 +7,9 @@ import Home from './pages/Home/Home';
 import AccountSummary from './pages/AccountSummary/AccountSummary';
 import ActiveGoals from './pages/ActiveGoals/ActiveGoals';
 import CompletedGoals from './pages/CompletedGoals/CompletedGoals';
-import Form from "./components/NewGoalForm/NewGoalForm";
+// import bigDecimal from 'js-big-decimal';
+import { addNumbers } from './utils/NumberHelper';
+import { subNumbers } from './utils/NumberHelper';
 
 function App() {  
   const [account, setAccount] = useState([]);
@@ -43,17 +45,16 @@ function App() {
   function increaseBalance() {
     return {
       ...account,
-      balance: (parseFloat(account.balance) + parseFloat(inputTransaction))
+      balance: addNumbers(account.balance, inputTransaction)
     }
   }
   
   function decreaseBalance() {
     return {
       ...account,
-      balance: (parseFloat(account.balance) - parseFloat(inputTransaction))
+      balance: subNumbers(account.balance - inputTransaction)
     }
   }
-
 
   function handleSubmitTransaction(e) {
     e.preventDefault();
