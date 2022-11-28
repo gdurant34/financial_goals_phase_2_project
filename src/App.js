@@ -136,3 +136,5 @@ function App() {
 }
 
 export default App;
+
+// if I make multiple changes in different files, I can see each individual changes under source control. 
